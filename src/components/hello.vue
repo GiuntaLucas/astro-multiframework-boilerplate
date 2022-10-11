@@ -1,13 +1,15 @@
 
-<script>
+<script lang="ts">
     import {helloSubject} from '../stores/hello.store';
 
 
     export default {
         name: 'VueHello',
+        props: {
+            name: String
+        },
         data() {
             return {
-                title: 'Vue',
                 yo: '',
             }
         },
@@ -23,7 +25,7 @@
 </script>
 
 <template>
-    <h1 class="text-green-500">Hello {{title}}</h1>
+    <h1 class="text-green-500">Hello {{name}}</h1>
     <button @click="yoFrom()">Yo</button>
     <p>{{yo}}</p>
 </template>

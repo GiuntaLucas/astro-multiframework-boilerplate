@@ -5,21 +5,26 @@ import SvelteHello from "../components/hello.svelte";
 import { ReactHello } from "../components/hello";
 import VueHello from "../components/hello.vue";
 
+const svelte = 'Svelte';
+const angular = 'Angular';
+const react = 'React';
+const vue = 'Vue';
+
 ---
 
 <Layout title="Welcome to Astro multri framework">
   <div class="h-screen w-screen flex justify-around items-center">
     <div>
-      <AngularHello client:visible />
+      <AngularHello client:visible name={angular} />
     </div>
     <div>
-      <ReactHello client:visible />
+      <ReactHello client:visible name={react}/>
     </div>
     <div>
-      <SvelteHello client:visible />
+      <SvelteHello client:visible name={svelte} />
     </div>
     <div>
-      <VueHello client:visible />
+      <VueHello client:visible name={vue}/>
     </div>
   </div>
 </Layout>

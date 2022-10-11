@@ -1,11 +1,11 @@
-import { Component, inject, NgZone } from '@angular/core';
+import { Component, inject, Input, NgZone } from '@angular/core';
 import { enterZone } from '../pipe/angular-enter-zone';
 import {helloSubject} from '../stores/hello.store';
 @Component({
   selector: 'app-hello',
   standalone: true,
   template: `
-    <h1 class="text-red-500">Hello {{title}}</h1>
+    <h1 class="text-red-500">Hello {{name}}</h1>
     <button (click)="toggle()">Yo</button>
     <p>{{yo}}</p>
 
@@ -13,7 +13,7 @@ import {helloSubject} from '../stores/hello.store';
 })
 export class AngularHello {
   yo = '';
-  title = 'Angular';
+  @Input() name: string;
   private readonly ngZone = inject(NgZone);
 
   constructor() {
