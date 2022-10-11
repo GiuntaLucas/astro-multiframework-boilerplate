@@ -1,6 +1,7 @@
-import { Component, inject, Input, NgZone } from '@angular/core';
+import { Component, inject, Input, NgZone, OnChanges, SimpleChanges } from '@angular/core';
 import { enterZone } from '../pipe/angular-enter-zone';
 import {helloSubject} from '../stores/hello.store';
+
 @Component({
   selector: 'app-hello',
   standalone: true,
@@ -11,13 +12,16 @@ import {helloSubject} from '../stores/hello.store';
 
   `,
 })
-export class AngularHello {
+export class AngularHello implements OnChanges {
   yo = '';
   @Input() name: string;
   private readonly ngZone = inject(NgZone);
 
   constructor() {
     helloSubject.pipe(enterZone(this.ngZone)).subscribe(x => this.yo = x);
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
   }
 
   toggle() {
