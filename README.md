@@ -6,6 +6,9 @@ Astro project with multiframework integration + communication between each other
 - Svelte
 - Vuejs
 
+- Tailwindcss
+
+
 ## Setup
 
 Install the project dependencies:
