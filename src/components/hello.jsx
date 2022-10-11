@@ -4,7 +4,7 @@ import {helloSubject} from '../stores/hello.store';
 
 export function ReactHello() {
     const [yoFrom, setYoFrom] = useState('');
-  
+    const title = 'React';
     useEffect(() => {
         helloSubject.subscribe(x => setYoFrom(x))
     });
@@ -15,7 +15,7 @@ export function ReactHello() {
   
     return (
         <>
-            <h1 style={{color: 'blue'}}>Hello React</h1>
+            <h1 className="text-blue-500">Hello {title}</h1>
             <button onClick={yo}>Yo</button>
             <p>{yoFrom}</p>
         </>

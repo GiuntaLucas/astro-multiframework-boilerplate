@@ -4,10 +4,11 @@ import { AngularHello } from "../components/hello.component.ts";
 import SvelteHello from "../components/hello.svelte";
 import { ReactHello } from "../components/hello";
 import VueHello from "../components/hello.vue";
+
 ---
 
 <Layout title="Welcome to Astro multri framework">
-  <div class="container">
+  <div class="h-screen w-screen flex justify-around items-center">
     <div>
       <AngularHello client:visible />
     </div>
@@ -22,13 +23,3 @@ import VueHello from "../components/hello.vue";
     </div>
   </div>
 </Layout>
-
-<style>
-  .container {
-	height: 100vh;
-	width: 100vw;
-    display: flex;
-	justify-content: space-around;
-	align-items: center;
-  }
-</style>

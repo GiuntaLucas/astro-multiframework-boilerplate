@@ -1,18 +1,13 @@
 <script>
     import {helloSubject} from '../stores/hello.store';
 
-    const name = 'Svelte'
+    
+    let title = 'Svelte';
 
     function yo() {
         helloSubject.next('Yo from Svelte');
     }
 </script>
-<h1 >Hello {name}</h1>
+<h1 class="text-orange-500">Hello {title}</h1>
 <button on:click={() => yo()}>Yo</button>
 <p>{$helloSubject}</p>
-
-<style>
-    h1 {
-        color: orange;
-    }
-</style>

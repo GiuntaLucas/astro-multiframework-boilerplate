@@ -7,6 +7,7 @@
         name: 'VueHello',
         data() {
             return {
+                title: 'Vue',
                 yo: '',
             }
         },
@@ -22,13 +23,7 @@
 </script>
 
 <template>
-    <h1>Hello Vue</h1>
+    <h1 class="text-green-500">Hello {{title}}</h1>
     <button @click="yoFrom()">Yo</button>
     <p>{{yo}}</p>
 </template>
-
-<style>
-    h1 {
-        color: green;
-    }
-</style>

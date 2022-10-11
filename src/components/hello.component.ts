@@ -1,14 +1,11 @@
-import { CommonModule, NgIf } from '@angular/common';
 import { Component, inject, NgZone } from '@angular/core';
 import { enterZone } from '../pipe/angular-enter-zone';
 import {helloSubject} from '../stores/hello.store';
 @Component({
   selector: 'app-hello',
   standalone: true,
-  imports: [NgIf, CommonModule ],
-  styles: ['h1 { color: red; }'],
   template: `
-    <h1>Hello Angular</h1>
+    <h1 class="text-red-500">Hello {{title}}</h1>
     <button (click)="toggle()">Yo</button>
     <p>{{yo}}</p>
 
@@ -16,10 +13,11 @@ import {helloSubject} from '../stores/hello.store';
 })
 export class AngularHello {
   yo = '';
+  title = 'Angular';
   private readonly ngZone = inject(NgZone);
 
   constructor() {
-    helloSubject.pipe(enterZone(this.ngZone)).subscribe(x => this.yo = x)
+    helloSubject.pipe(enterZone(this.ngZone)).subscribe(x => this.yo = x);
   }
 
   toggle() {
