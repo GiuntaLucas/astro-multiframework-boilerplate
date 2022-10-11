@@ -1,6 +1,10 @@
-# Angular + Astro
+# Astro multi framework integration
 
-An example website using Astro and Angular components
+Astro project with multiframework integration + communication between each others using rxjs.
+- Angular
+- Reactjs
+- Svelte
+- Vuejs
 
 ## Setup
 
