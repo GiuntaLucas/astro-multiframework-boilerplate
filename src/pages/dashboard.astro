@@ -1,0 +1,14 @@
+---
+import User from "../components/user.svelte";
+import Layout from "../layouts/Layout.astro";
+---
+
+<script lang="js">
+  if (!localStorage.getItem("user")) {
+    location.replace("login");
+  }
+</script>
+
+<Layout title="logged page">
+  <User client:only />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Login from "../components/login.svelte";
+import Layout from "../layouts/Layout.astro";
+---
+
+<script lang="js">
+  if (localStorage.getItem("user")) {
+    location.replace("dashboard");
+  }
+</script>
+
+<Layout title="login page">
+  <Login client:visible />
+</Layout>

@@ -13,8 +13,8 @@ import {helloSubject} from '../stores/hello.store';
   `,
 })
 export class AngularHello implements OnInit {
-  yo = '';
-  @Input() name: string;
+  yo!: string;
+  @Input() name!: string;
   private readonly ngZone = inject(NgZone);
 
   constructor() {

@@ -1,5 +1,5 @@
 
-<script lang="ts">
+<script lang="js">
     import {helloSubject} from '../stores/hello.store';
 
 
