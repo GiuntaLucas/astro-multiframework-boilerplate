@@ -1,7 +1,9 @@
-# Astro multi framework integration + firebase authentification
+# Astro multi framework integration + firebase/metamask authentification
 
 Astro project with multiframework integration + communication between each others using rxjs.
 Login / logout using firebase package with a Svelte components. Guard has been add to protect the routes.
+Login to Metamask wallet using Svelte components and rxjs services.
+
 - Angular
 - Reactjs
 - Svelte
