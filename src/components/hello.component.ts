@@ -6,7 +6,7 @@ import {helloSubject} from '../stores/hello.store';
   selector: 'app-hello',
   standalone: true,
   template: `
-    <h1 class="text-red-500">Hello {{name}}</h1>
+    <h2 class="text-red-500">Hello {{name}}</h2>
     <button (click)="toggle()">Yo</button>
     <p>{{yo}}</p>
 

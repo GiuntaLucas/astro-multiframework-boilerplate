@@ -8,6 +8,6 @@
         helloSubject.next('Yo from Svelte');
     }
 </script>
-<h1 class="text-orange-500">Hello {name}</h1>
+<h2 class="text-orange-500">Hello {name}</h2>
 <button on:click={() => yo()}>Yo</button>
 <p>{$helloSubject}</p>

@@ -25,7 +25,7 @@
 </script>
 
 <template>
-    <h1 class="text-green-500">Hello {{name}}</h1>
+    <h2 class="text-green-500">Hello {{name}}</h2>
     <button @click="yoFrom()">Yo</button>
     <p>{{yo}}</p>
 </template>
