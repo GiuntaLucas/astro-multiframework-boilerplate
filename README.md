@@ -1,12 +1,14 @@
-# Astro multi framework integration
+# Astro multi framework integration + firebase authentification
 
 Astro project with multiframework integration + communication between each others using rxjs.
+Login / logout using firebase package with a Svelte components. Guard has been add to protect the routes.
 - Angular
 - Reactjs
 - Svelte
 - Vuejs
 
 - Tailwindcss
+- Firebase
 
 
 ## Setup
