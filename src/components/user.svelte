@@ -1,6 +1,6 @@
 <script>
   import { auth, currentUser$ } from "../firebase.app";
-  import { pipe, tap } from "rxjs";
+  import { tap } from "rxjs";
 
   const user = currentUser$.pipe(tap((x) => console.log(x)));
   
