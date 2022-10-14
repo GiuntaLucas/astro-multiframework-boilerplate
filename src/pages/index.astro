@@ -5,6 +5,7 @@ import SvelteHello from "../components/hello.svelte";
 import VueHello from "../components/hello.vue";
 import AstroHello from "../components/hello.astro";
 import ReactHello from "../components/hello";
+import { AngularSearch } from "../components/search.component.ts";
 
 const svelte = 'Svelte';
 const angular = 'Angular';
@@ -15,21 +16,30 @@ const astro = 'Astro';
 ---
 
 <Layout title="Welcome to Astro multri framework">
-  <div class="grid grid-flow-col grid-cols-5 h-screen w-screen gap-2">
-    <div class="flex flex-col justify-center">
+  <div class="flex justify-center mb-2">
+    <AngularSearch client:visible/>
+  </div>
+  <div class="grid grid-flow-col w-screen gap-2">
+    <div class="flex flex-col">
       <AstroHello name={astro}/>
     </div>
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col">
       <AngularHello client:visible name={angular} />
     </div>
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col">
       <ReactHello client:visible name={react}/>
     </div>
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col">
       <SvelteHello client:visible name={svelte} />
     </div>
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col">
       <VueHello client:visible name={vue}/>
     </div>
   </div>
 </Layout>
+
+<style>
+  .grid {
+    grid-template-columns: auto auto;
+  }
+</style>

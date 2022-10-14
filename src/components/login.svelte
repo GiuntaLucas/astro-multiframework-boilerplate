@@ -8,8 +8,6 @@
   }
 </script>
 
-<div class="h-screen w-screen flex justify-center items-center">
-  <button type="button" on:click={login}
-    >Signin with Google</button
-  >
+<div class="flex justify-center items-center">
+  <button type="button" on:click={login}>Signin with Google</button>
 </div>

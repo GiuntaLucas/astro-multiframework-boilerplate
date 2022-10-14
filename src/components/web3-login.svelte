@@ -25,7 +25,7 @@
   }
 </script>
 
-<div class="h-screen w-screen flex justify-center items-center">
+<div class="flex justify-center items-center">
   {#if $accounts && $accounts.length > 0}
     <p>{$accounts[0]}</p>
   {:else}

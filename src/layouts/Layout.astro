@@ -15,8 +15,13 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="h-screen w-screen flex flex-col">
+		<div class="flex justify-center h-64">
+			<img class="w-[400px]" src="https://astro.build/assets/press/full-logo-light.svg" alt="">
+		</div>
+		<div class="flex-grow">
+			<slot />
+		</div>
 	</body>
 </html>
 <style>
@@ -56,9 +61,14 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 	:global(button) {
-		@apply bg-slate-200 p-1 w-fit;
+		@apply bg-slate-300 transition-all hover:opacity-90 p-1 pl-3 pr-3 w-fit;
+		border-radius: 5px;
 	}
 	:global(button:disabled) {
 		@apply bg-slate-200 cursor-not-allowed;
+	}
+	:global(a) {
+		@apply transition-all bg-orange-300 hover:bg-orange-500 hover:opacity-90 p-1 pl-3 pr-3 w-fit;
+		border-radius: 5px;
 	}
 </style>

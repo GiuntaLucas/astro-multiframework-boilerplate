@@ -11,7 +11,7 @@
 </script>
 
 {#if $user}
-  <div class="h-screen flex-col w-screen flex justify-center items-center">
+  <div class="flex-col flex justify-center items-center">
     <div class="flex justify-center items-center">
       <img src={$user?.photoURL} alt="" />
       <div class="flex flex-col pl-2">
